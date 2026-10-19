@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Catàleg de la botiga de videojocs DogstarGames. Aquest és l'element arrel que engloba tot el document. -->
+<Botiga>
+
+  <!-- Dades pròpies de la botiga, separades de la llista de jocs perquè el catàleg no comenci directament amb els videojocs -->
+  <DadesBotiga>
+    <NomBotiga>DogstarGames</NomBotiga>
+    <Divisa>€</Divisa>
+    <UltimaAct>
+      <Dia>26</Dia>
+      <Mes>09</Mes>
+      <Any>2026</Any>
+    </UltimaAct>
+  </DadesBotiga>
+
+  <!-- Contenidor principal on s'emmagatzemen els videojocs del catàleg -->
+  <SeccioVideojocs>
+
+    <!-- Cada joc té el seu propi codi identificador únic dins de l'element Videojoc -->
+    <Videojoc>
+      <Codi>GTA-001</Codi>
+      <Títol>GTA 1</Títol>
+      <!-- Agrupem els gèneres i les plataformes dins d'etiquetes pare (Generes, Plataformes) per permetre l'assignació de múltiples valors a un mateix joc -->
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PC</Plataforma>
+        <Plataforma>PS1</Plataforma>
+      </Plataformes>
+      <Preu>69.99</Preu>
+      <!-- S'utilitza un atribut 'info' per donar context sobre l'escala de puntuació, deixant només el valor numèric com a contingut de l'element -->
+      <Valoracio info="Sobre 10">8</Valoracio>
+      <Estoc>165</Estoc>
+      <!-- Es fa servir estrictament el format de data requerit: AAAA-MM-DD -->
+      <DataLlancament>1997-10-21</DataLlancament>
+      <Descripcio>El joc que ho va començar tot. Experimenta el primer capítol de l'acció criminal en un món obert, on tu tries on anar i a qui robar.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-002</Codi>
+      <Títol>GTA 2</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PC</Plataforma>
+        <Plataforma>PS1</Plataforma>
+      </Plataformes>
+      <Preu>49.99</Preu>
+      <Valoracio info="Sobre 10">8.2</Valoracio>
+      <Estoc>122</Estoc>
+      <DataLlancament>1999-09-30</DataLlancament>
+      <Descripcio>El respecte ho és tot. A Anywhere City, el crim està dividit en diverses bandes. Treballa per a elles, guanya el seu respecte i destrueix els teus enemics.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-003</Codi>
+      <Títol>GTA III</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PS2</Plataforma>
+        <Plataforma>PC</Plataforma>
+      </Plataformes>
+      <Preu>33.99</Preu>
+      <Valoracio info="Sobre 10">9.3</Valoracio>
+      <Estoc>308</Estoc>
+      <DataLlancament>2001-10-22</DataLlancament>
+      <Descripcio>El crim sí que compensa. La saga de gran èxit i alta controvèrsia fa el salt a les 3 dimensions en el fosc i sòrdid submón de Liberty City. Amb la llibertat d'anar a qualsevol lloc i atracar a qualsevol persona.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-004</Codi>
+      <Títol>GTA Vice City</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PS2</Plataforma>
+        <Plataforma>PC</Plataforma>
+      </Plataformes>
+      <Preu>99.99</Preu>
+      <Valoracio info="Sobre 10">9.5</Valoracio>
+      <Estoc>456</Estoc>
+      <DataLlancament>2002-10-29</DataLlancament>
+      <Descripcio>Benvingut als anys vuitanta. De la dècada de les grans cabelleres, l'excés i els vestits de tons pastís, arriba la història de l'ascens d'un home al cim de l'imperi criminal.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-005</Codi>
+      <Títol>GTA San Andreas</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PS2</Plataforma>
+        <Plataforma>PC</Plataforma>
+      </Plataformes>
+      <Preu>129.99</Preu>
+      <Valoracio info="Sobre 10">10</Valoracio>
+      <Estoc>1090</Estoc>
+      <DataLlancament>2004-10-26</DataLlancament>
+      <Descripcio>Fa cinc anys, en Carl Johnson va escapar de les pressions de Los Santos, San Andreas, una ciutat destrossada per les bandes, les drogues i la corrupció. Ara, a principis dels noranta, en CJ ha de tornar a casa.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-006</Codi>
+      <Títol>GTA Advance</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>Game Boy Advance</Plataforma>
+      </Plataformes>
+      <Preu>4.00</Preu>
+      <Valoracio info="Sobre 10">7.0</Valoracio>
+      <Estoc>1</Estoc>
+      <DataLlancament>2004-10-26</DataLlancament>
+      <Descripcio>Torna als carrers de Liberty City des d'una nova perspectiva. Centenars d'hores de joc amb tota l'acció clàssica de GTA dissenyada per a la consola portàtil.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-007</Codi>
+      <Títol>GTA IV</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PS3</Plataforma>
+        <Plataforma>Xbox 360</Plataforma>
+        <Plataforma>PC</Plataforma>
+      </Plataformes>
+      <Preu>599.99</Preu>
+      <Valoracio info="Sobre 10">10</Valoracio>
+      <Estoc>5680</Estoc>
+      <DataLlancament>2008-04-29</DataLlancament>
+      <Descripcio>Què significa avui dia el somni americà? Per a en Niko Bellic, acabat d'arribar d'Europa en vaixell, és l'esperança de poder escapar del seu passat. Per al seu cosí, en Roman, és la visió que junts poden fer fortuna a Liberty City.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-008</Codi>
+      <Títol>GTA Chinatown Wars</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>Nintendo DS</Plataforma>
+        <Plataforma>PSP</Plataforma>
+      </Plataformes>
+      <Preu>1.99</Preu>
+      <Valoracio info="Sobre 10">9.0</Valoracio>
+      <Estoc>6</Estoc>
+      <DataLlancament>2009-03-17</DataLlancament>
+      <Descripcio>Després de l'assassinat del seu pare, en Huang Lee té una missió molt senzilla: portar una espasa antiga al seu oncle Kenny per assegurar-se que la seva família conservi el control de les tríades de Liberty City.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-009</Codi>
+      <Títol>GTA V</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PS4</Plataforma>
+        <Plataforma>Xbox One</Plataforma>
+        <Plataforma>PC</Plataforma>
+      </Plataformes>
+      <Preu>1999.99</Preu>
+      <Valoracio info="Sobre 10">9.7</Valoracio>
+      <Estoc>9999</Estoc>
+      <DataLlancament>2013-09-17</DataLlancament>
+      <!-- S'utilitza l'entitat predefinida &apos; per poder escriure apòstrofs en català sense que l'XML deixi d'estar ben format -->
+      <Descripcio>Quan un jove estafador del carrer, un atracador de bancs retirat i un psicòpata aterridor es veuen involucrats amb el pitjor de l&apos;inframon criminal, el govern dels EUA i la indústria de l&apos;espectacle, hauran de dur a terme una sèrie de perillosos cops per sobreviure.</Descripcio>
+    </Videojoc>
+
+    <Videojoc>
+      <Codi>GTA-010</Codi>
+      <Títol>GTA 6</Títol>
+      <Generes>
+        <Genere>Acció</Genere>
+        <Genere>Món Obert</Genere>
+      </Generes>
+      <Plataformes>
+        <Plataforma>PS5</Plataforma>
+        <Plataforma>Xbox Series X</Plataforma>
+      </Plataformes>
+      <Preu>199999.99</Preu>
+      <!-- L'estoc i la valoració són exclusivament valors numèrics purs, per complir amb les restriccions del disseny de la dada per a un futur DTD -->
+      <Valoracio info="Sobre 10">0</Valoracio>
+      <Estoc>0</Estoc>
+      <DataLlancament>2026-11-19</DataLlancament>
+      <Descripcio>Grand Theft Auto VI viatja a l'estat de Leonida, on es troben els carrers banyats per neons de Vice City i els seus voltants, en l'evolució més gran i immersiva de la saga Grand Theft Auto fins ara.</Descripcio>
+    </Videojoc>
+
+  </SeccioVideojocs>
+</Botiga>
