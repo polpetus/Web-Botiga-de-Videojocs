@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>Reserva | Dogstar Games Store</title>
+        <meta name="description" content="Formulari de reserva de videojocs a Dogstar Games Store">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Dogstar Games Store">
+    </head>
+
+    <body>
+        <header class="site-header">
+            <div class="brand">
+                <img src="img/logo dogstar.png" alt="Logo Dogstar Games Store" width="40" height="40">
+                <h1>DOGSTAR GAMES STORE</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="web cataleg videojocs .html">Catàleg</a>
+                <a href="fitxa.html">Fitxa</a>
+                <a href="contacte.html">Contacte</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Formulari de reserva</h2>
+
+            <form action="#" method="post">
+                <label for="nom">Nom complet *</label><br>
+                <input type="text" id="nom" name="nom" required><br><br>
+
+                <label for="email">Correu electrònic *</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="telefon">Telèfon</label><br>
+                <input type="tel" id="telefon" name="telefon"><br><br>
+
+                <label for="joc">Joc a reservar *</label><br>
+                <select id="joc" name="joc" required>
+                    <option value="">-- Selecciona un joc --</option>
+                    <option value="GTA">GTA</option>
+                    <option value="GTA 2">GTA 2</option>
+                    <option value="GTA III">GTA III</option>
+                    <option value="GTA Vice City">GTA Vice City</option>
+                    <option value="GTA San Andreas">GTA San Andreas</option>
+                    <option value="GTA Advance">GTA Advance</option>
+                    <option value="GTA IV">GTA IV</option>
+                    <option value="GTA Chinatown Wars">GTA Chinatown Wars</option>
+                    <option value="GTA V">GTA V</option>
+                    <option value="GTA 6">GTA VI</option>
+                </select><br><br>
+
+                <label for="quantitat">Quantitat</label><br>
+                <input type="number" id="quantitat" name="quantitat" min="1" max="10" value="1"><br><br>
+
+                <label for="metode">Mètode de pagament</label><br>
+                <select id="metode" name="metode">
+                    <option value="targeta">Targeta</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bizum">Bizum</option>
+                    <option value="transferencia">Transferència</option>
+                </select><br><br>
+
+                <label for="comentaris">Comentaris</label><br>
+                <textarea id="comentaris" name="comentaris" rows="5" cols="40" placeholder="Escriu aquí les teves observacions..."></textarea><br><br>
+
+                <label for="condicions">
+                    <input type="checkbox" id="condicions" name="condicions" required>
+                    Accepto les condicions de reserva *
+                </label><br><br>
+
+                <button type="submit">Enviar reserva</button>
+            </form>
+        </main>
+    </body>
+</html>
