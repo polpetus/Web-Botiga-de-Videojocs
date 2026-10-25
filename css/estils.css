@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --fons: #1b1024;
+    --superficie: #2d1a38;
+    --text: #fff3fb;
+    --textSuau: #dbc3df;
+    --lila: #a65bd4;
+    --rosa: #ff5ca8;
+    --rosaClar: #f6a6d8;
+    --text-font: Arial, sans-serif;
+    --title-font: "Bebas Neue", Impact, "Arial Narrow Bold", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--fons);
+    color: var(--text);
+    font-family: var(--text-font);
+    line-height: 1.6;
+}
+
+.site-header,
+.logo,
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-header {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background: #170d1e;
+    border-bottom: .25rem solid var(--rosa);
+}
+
+.logo { gap: .75rem; }
+.logo h1 { color: var(--rosaClar); font: 1.4rem var(--title-font); text-transform: uppercase; }
+.main-nav { flex-wrap: wrap; gap: 1rem; }
+.main-nav a { color: var(--text); text-decoration: none; }
+.main-nav a:hover { color: var(--rosaClar); }
+
+main {
+    width: 90%;
+    max-width: 70rem;
+    margin: 2rem auto;
+}
+
+#reserva { max-width: 42rem; }
+
+.catalog {
+    display: grid;
+    max-width: 76rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+.catalog-title {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+section {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: var(--superficie);
+    border-left: .3rem solid var(--lila);
+}
+
+.catalog section { margin: 0; border-left-color: var(--rosa); }
+
+h2 { color: var(--rosa); }
+h3 { color: var(--lila); }
+h2 {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+p { color: var(--textSuau); }
+.catalog h3 { color: var(--textSuau); }
+
+img, video { max-width: 100%; height: auto; }
+.catalog img { display: block; width: auto; margin: .5rem auto; }
+
+form { padding: 1.25rem; border-top: .25rem solid var(--rosaClar); }
+input:not([type="checkbox"]), select, textarea {
+    width: 100%;
+    margin: .3rem 0 1rem;
+    padding: .65rem;
+    color: var(--text);
+    border: 1px solid var(--textSuau);
+    font: inherit;
+}
+
+button {
+    padding: .7rem 1rem;
+    color: #fff;
+    background: var(--lila);
+    border: 0;
+    cursor: pointer;
+}
+button:hover { background: var(--rosa); }
+
+footer {
+    padding: 1rem;
+    color: #fff;
+    background: #170d1e;
+    text-align: center;
+}
+
+@media (max-width: 40rem) {
+    .site-header { align-items: flex-start; flex-direction: column; }
+    .catalog { grid-template-columns: 1fr; }
+}
