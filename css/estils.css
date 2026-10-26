@@ -72,6 +72,7 @@ section {
     padding: 1.25rem;
     background: var(--superficie);
     border-left: .3rem solid var(--lila);
+    border-radius: 1rem;
 }
 
 .catalog section { margin: 0; border-left-color: var(--rosa); }
@@ -90,14 +91,24 @@ p { color: var(--textSuau); }
 img, video { max-width: 100%; height: auto; }
 .catalog img { display: block; width: auto; margin: .5rem auto; }
 
-form { padding: 1.25rem; border-top: .25rem solid var(--rosaClar); }
+form {
+    padding: 1.25rem;
+    border-top: .25rem solid var(--rosaClar);
+    border-radius: 1rem;
+}
 input:not([type="checkbox"]), select, textarea {
     width: 100%;
     margin: .3rem 0 1rem;
     padding: .65rem;
-    color: var(--text);
+    color: #ffffff;
+    background: #2d1a38;
     border: 1px solid var(--textSuau);
+    border-radius: .75rem;
     font: inherit;
+}
+select, option {
+    color: #ffffff;
+    background: #2d1a38;
 }
 
 button {
@@ -105,6 +116,7 @@ button {
     color: #fff;
     background: var(--lila);
     border: 0;
+    border-radius: .75rem;
     cursor: pointer;
 }
 button:hover { background: var(--rosa); }
