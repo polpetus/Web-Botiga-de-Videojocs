@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dogstar Games Store</title>
+        <meta name="description" content="Catàleg de videojocs de Rockstar Games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Dogstar Games Store">
+        <link rel="stylesheet" href="../css/estils.css">
+        <script src="../js/cataleg.js" defer></script>
+        <script src="../js/tema.js" defer></script>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a href="index.html" class="logo" aria-label="Anar al catàleg de videojocs">
+                <img src="../img/logo dogstar.png" alt="Logo Dogstar Games Store" width="40" height="40">
+                <h1>DOGSTAR GAMES STORE</h1>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Catàleg</a>
+                <a href="fitxa.html">Fitxa</a>
+                <a href="reserva.html">Reserva</a>
+                <button id="tema-toggle" class="theme-toggle" aria-label="Canviar tema">☀︎</button>
+            </nav>
+        </header>
+
+        <main id="cataleg">
+            <h2 class="catalog-title">Catàleg de videojocs</h2>
+            <!-- Les targetes es generen amb JavaScript (js/cataleg.js) -->
+            <div id="contenidor-jocs" class="catalog"></div>
+        </main>
+    </body>
+
+</html>

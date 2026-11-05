@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --fons: #1b1024;
+    --superficie: #2d1a38;
+    --text: #fff3fb;
+    --textSuau: #dbc3df;
+    --lila: #a65bd4;
+    --rosa: #ff5ca8;
+    --rosaClar: #f6a6d8;
+    --text-font: Arial, sans-serif;
+    --title-font: "Bebas Neue", Impact, "Arial Narrow Bold", sans-serif;
+    --capcalera: #170d1e;
+}
+
+body {
+    margin: 0;
+    background: var(--fons);
+    color: var(--text);
+    font-family: var(--text-font);
+    line-height: 1.6;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.light-mode {
+    --fons: #f9d9ea;
+    --superficie: #fff2f8;
+    --text: #3a1635;
+    --textSuau: #714f6d;
+    --lila: #b34dd4;
+    --rosa: #ee5e9f;
+    --rosaClar: #f7bfd8;
+    --capcalera: #ffa3d4;
+}
+
+.site-header,
+.logo,
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-header {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background: var(--capcalera);
+    border-bottom: .25rem solid var(--rosa);
+}
+
+.logo {
+    gap: .75rem;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+.logo:visited,
+.logo:hover,
+.logo:focus,
+.logo:active {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    background: transparent;
+}
+
+.logo h1 { color: var(--rosaClar); font: 1.4rem var(--title-font); text-transform: uppercase; }
+.main-nav { flex-wrap: wrap; gap: 1rem; }
+.main-nav a { color: var(--text); text-decoration: none; }
+.main-nav a:hover { color: var(--rosaClar); }
+
+main {
+    width: 90%;
+    max-width: 70rem;
+    margin: 2rem auto;
+}
+
+#reserva { max-width: 42rem; }
+
+.catalog {
+    display: grid;
+    max-width: 76rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+.catalog-title {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Les targetes del catàleg són <article>, la resta de blocs són <section> */
+section,
+article {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: var(--superficie);
+    border-left: .3rem solid var(--lila);
+    border-radius: 1rem;
+}
+
+.catalog article { margin: 0; border-left-color: var(--rosa); }
+
+/* Estoc baix: té més pes que .catalog article perquè porta dues classes */
+.catalog .estoc-baix { border-left-color: #e67e22; }
+.esgotat { color: #e74c3c; font-weight: 700; text-transform: uppercase; }
+
+h2 { color: var(--rosa); }
+h3 { color: var(--lila); }
+h2 {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+p { color: var(--textSuau); }
+.catalog h3 { color: var(--textSuau); }
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .5rem;
+    min-width: 0;
+}
+
+.game-header h2 {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+}
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+    padding: .5rem .8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(244, 201, 93, 0.6);
+    background: rgba(244, 201, 93, 0.18);
+    color: #f4c95d;
+    font-weight: 700;
+    font-size: .82rem;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.rating-pending {
+    background: #dfe7f4;
+    border-color: rgba(27, 16, 36, 0.2);
+    color: #1b1024;
+}
+
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5rem 0 1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.badge-popular {
+    background: #f4c95d;
+    color: #1b1024;
+}
+
+.badge-upcoming {
+    background: #4aa3ff;
+    color: #ffffff;
+}
+
+.fitxa-table {
+    width: 100%;
+    margin-top: 1.25rem;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: .75rem;
+    overflow: hidden;
+}
+
+.fitxa-table th,
+.fitxa-table td {
+    padding: .7rem .9rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--textSuau);
+}
+
+.platform-badge {
+    display: inline-block;
+    margin-right: .5rem;
+    padding: .25rem .55rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--textSuau);
+    font-size: .78rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.platform-badge--primary {
+    background: rgba(76, 154, 255, 0.18);
+    border-color: rgba(76, 154, 255, 0.5);
+    color: #b8d7ff;
+    box-shadow: inset 0 0 0 1px rgba(184, 215, 255, 0.15);
+}
+
+.fitxa-table th {
+    width: 35%;
+    color: var(--text);
+    font-weight: bold;
+    background: rgba(166, 91, 212, 0.08);
+}
+
+.fitxa-table tr:last-child th,
+.fitxa-table tr:last-child td {
+    border-bottom: 0;
+}
+
+img, video { max-width: 100%; height: auto; }
+.catalog img { display: block; width: auto; margin: .5rem auto; }
+#fitxa img,
+#fitxa video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    padding: 1.25rem;
+    border-top: .25rem solid var(--rosaClar);
+    border-radius: 1rem;
+}
+input:not([type="checkbox"]), select, textarea {
+    width: 100%;
+    margin: .3rem 0 1rem;
+    padding: .65rem;
+    color: var(--text);
+    background: var(--superficie);
+    border: 1px solid var(--textSuau);
+    border-radius: .75rem;
+    font: inherit;
+}
+select, option {
+    color: var(--text);
+    background: var(--superficie);
+}
+
+button {
+    padding: .7rem 1rem;
+    color: #fff;
+    background: var(--lila);
+    border: 0;
+    border-radius: .75rem;
+    cursor: pointer;
+}
+button:hover { background: var(--rosa); }
+
+.theme-toggle {
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
+    font: inherit;
+    transition: all 0.2s ease;
+}
+
+/* ===== Ajustos del mode clar ===== */
+body.light-mode .theme-toggle {
+    border-color: rgba(140, 42, 92, 0.2);
+    background: rgba(238, 94, 159, 0.2);
+    color: #4a1737;
+}
+
+body.light-mode .fitxa-table th,
+body.light-mode .fitxa-table td {
+    border-bottom-color: rgba(58, 22, 53, 0.15);
+}
+
+body.light-mode .platform-badge {
+    background: rgba(58, 22, 53, 0.06);
+    border-color: rgba(58, 22, 53, 0.2);
+}
+
+body.light-mode .platform-badge--primary {
+    background: rgba(76, 154, 255, 0.15);
+    border-color: rgba(26, 79, 153, 0.5);
+    color: #1a4f99;
+    box-shadow: none;
+}
+
+body.light-mode .rating:not(.rating-pending) {
+    color: #8a5a00;
+    border-color: rgba(138, 90, 0, 0.5);
+    background: rgba(244, 201, 93, 0.3);
+}
+
+body.light-mode .logo h1 {
+    color: var(--text);
+}
+
+footer {
+    padding: 1rem;
+    color: var(--text);
+    background: var(--capcalera);
+    text-align: center;
+}
+
+@media (max-width: 40rem) {
+    .site-header { align-items: flex-start; flex-direction: column; }
+    .catalog { grid-template-columns: 1fr; }
+}
