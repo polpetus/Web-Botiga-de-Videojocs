@@ -15,6 +15,7 @@
     --text-font: Arial, sans-serif;
     --title-font: "Bebas Neue", Impact, "Arial Narrow Bold", sans-serif;
     --capcalera: #170d1e;
+    --error: #ff6b6b;
 }
 
 body {
@@ -35,6 +36,7 @@ body.light-mode {
     --rosa: #ee5e9f;
     --rosaClar: #f7bfd8;
     --capcalera: #ffa3d4;
+    --error: #c0392b;
 }
 
 .site-header,
@@ -70,10 +72,25 @@ body.light-mode {
     background: transparent;
 }
 
-.logo h1 { color: var(--rosaClar); font: 1.4rem var(--title-font); text-transform: uppercase; }
-.main-nav { flex-wrap: wrap; gap: 1rem; }
-.main-nav a { color: var(--text); text-decoration: none; }
-.main-nav a:hover { color: var(--rosaClar); }
+.logo h1 {
+    color: var(--rosaClar);
+    font: 1.4rem var(--title-font);
+    text-transform: uppercase;
+}
+
+.main-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main-nav a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: var(--rosaClar);
+}
 
 main {
     width: 90%;
@@ -81,7 +98,9 @@ main {
     margin: 2rem auto;
 }
 
-#reserva { max-width: 42rem; }
+#reserva {
+    max-width: 42rem;
+}
 
 .catalog {
     display: grid;
@@ -96,7 +115,6 @@ main {
     font-size: 2.5rem;
 }
 
-/* Les targetes del catàleg són <article>, la resta de blocs són <section> */
 section,
 article {
     margin-bottom: 1.5rem;
@@ -106,22 +124,43 @@ article {
     border-radius: 1rem;
 }
 
-.catalog article { margin: 0; border-left-color: var(--rosa); }
+.catalog article {
+    margin: 0;
+    border-left-color: var(--rosa);
+}
 
-/* Estoc baix: té més pes que .catalog article perquè porta dues classes */
-.catalog .estoc-baix { border-left-color: #e67e22; }
-.esgotat { color: #e74c3c; font-weight: 700; text-transform: uppercase; }
+.catalog .estoc-baix {
+    border-left-color: #e67e22;
+}
 
-h2 { color: var(--rosa); }
-h3 { color: var(--lila); }
+.esgotat {
+    color: #e74c3c;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: var(--rosa);
+}
+
+h3 {
+    color: var(--lila);
+}
+
 h2 {
     font-family: var(--title-font);
     font-size: 1.8rem;
     font-weight: normal;
     text-transform: uppercase;
 }
-p { color: var(--textSuau); }
-.catalog h3 { color: var(--textSuau); }
+
+p {
+    color: var(--textSuau);
+}
+
+.catalog h3 {
+    color: var(--textSuau);
+}
 
 .game-header {
     display: flex;
@@ -238,8 +277,18 @@ p { color: var(--textSuau); }
     border-bottom: 0;
 }
 
-img, video { max-width: 100%; height: auto; }
-.catalog img { display: block; width: auto; margin: .5rem auto; }
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.catalog img {
+    display: block;
+    width: auto;
+    margin: .5rem auto;
+}
+
 #fitxa img,
 #fitxa video {
     display: block;
@@ -253,7 +302,10 @@ form {
     border-top: .25rem solid var(--rosaClar);
     border-radius: 1rem;
 }
-input:not([type="checkbox"]), select, textarea {
+
+input:not([type="checkbox"]),
+select,
+textarea {
     width: 100%;
     margin: .3rem 0 1rem;
     padding: .65rem;
@@ -263,7 +315,9 @@ input:not([type="checkbox"]), select, textarea {
     border-radius: .75rem;
     font: inherit;
 }
-select, option {
+
+select,
+option {
     color: var(--text);
     background: var(--superficie);
 }
@@ -276,19 +330,21 @@ button {
     border-radius: .75rem;
     cursor: pointer;
 }
-button:hover { background: var(--rosa); }
+
+button:hover {
+    background: var(--rosa);
+}
 
 .theme-toggle {
     padding: .5rem .9rem;
     border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.18);
-    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
     color: var(--text);
     font: inherit;
     transition: all 0.2s ease;
 }
 
-/* ===== Ajustos del mode clar ===== */
 body.light-mode .theme-toggle {
     border-color: rgba(140, 42, 92, 0.2);
     background: rgba(238, 94, 159, 0.2);
@@ -322,6 +378,277 @@ body.light-mode .logo h1 {
     color: var(--text);
 }
 
+.missatge-error {
+    margin: 0 0 1rem;
+    color: var(--error);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+form .camp-error {
+    border-color: var(--error);
+}
+
+#comptador-comentaris {
+    margin: 0 0 1rem;
+    font-size: .85rem;
+}
+
+#resum article {
+    margin-top: 1.5rem;
+    border-left-color: var(--rosa);
+}
+
+.ocult {
+    display: none;
+}
+
+.filtres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+    align-items: end;
+    margin: 1rem 0;
+}
+
+.filtre label {
+    display: block;
+    color: var(--textSuau);
+    font-weight: 700;
+}
+
+.filtres input:not([type="checkbox"]),
+.filtres select {
+    margin: .3rem 0 0;
+}
+
+.filtre-casella label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-bottom: .65rem;
+}
+
+.boto-secundari {
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--lila);
+}
+
+.boto-secundari:hover {
+    color: #fff;
+    background: var(--lila);
+}
+
+#comptador {
+    margin: 0 0 1rem;
+}
+
+#missatge-buit {
+    margin: 0 0 1rem;
+    font-weight: 700;
+}
+
+.accions {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-top: 1rem;
+}
+
+.boto-reservar {
+    display: inline-block;
+    padding: .6rem 1rem;
+    color: #fff;
+    background: var(--lila);
+    border-radius: .75rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.boto-reservar:hover {
+    background: var(--rosa);
+}
+
+.boto-avisa {
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--lila);
+}
+
+.boto-avisa:hover {
+    color: #fff;
+    background: var(--lila);
+}
+
+.ultimes-unitats {
+    color: #e67e22;
+    font-weight: 700;
+}
+
+.favorit {
+    padding: .3rem .65rem;
+    color: var(--rosa);
+    background: transparent;
+    border: 1px solid var(--lila);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.favorit:hover {
+    color: var(--rosa);
+    background: transparent;
+    border-color: var(--rosa);
+}
+
+.favorit.activat,
+.favorit.activat:hover {
+    color: #fff;
+    background: var(--rosa);
+    border-color: var(--rosa);
+}
+
+.catalog .targeta-destacada {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    background: linear-gradient(135deg, var(--superficie), var(--fons));
+    border-left-width: .5rem;
+    box-shadow: 0 0 0 1px var(--rosa);
+}
+
+@media (min-width: 60rem) {
+    .catalog .targeta-destacada {
+        grid-column: span 3;
+    }
+}
+
+.destacada-imatge {
+    flex: 0 1 14rem;
+}
+
+.destacada-info {
+    flex: 1 1 20rem;
+    min-width: 0;
+}
+
+.destacada-imatge img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.etiqueta-llancament {
+    display: inline-block;
+    margin: 0 0 .5rem;
+    padding: .3rem .8rem;
+    color: #fff;
+    background: var(--rosa);
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.compte-enrere {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: 1rem 0;
+    color: var(--rosa);
+    font-weight: 700;
+}
+
+.compte-caixa {
+    min-width: 4.5rem;
+    padding: .6rem .8rem;
+    text-align: center;
+    background: var(--fons);
+    border: 1px solid var(--rosa);
+    border-radius: .75rem;
+}
+
+.compte-valor {
+    display: block;
+    color: var(--rosa);
+    font-family: var(--title-font);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.compte-etiqueta {
+    display: block;
+    margin-top: .25rem;
+    color: var(--textSuau);
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.fitxa-llancament {
+    margin: 1.25rem 0;
+}
+
+.captura {
+    cursor: zoom-in;
+}
+
+.visor {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.visor.ocult {
+    display: none;
+}
+
+.visor img {
+    width: auto;
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: .75rem;
+}
+
+.tanca-visor {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+}
+
+.barra-reserva {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .75rem 5%;
+    background: var(--capcalera);
+    border-top: .25rem solid var(--rosa);
+}
+
+.barra-reserva span {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.barra-reserva+footer {
+    margin-bottom: 4.5rem;
+}
+
 footer {
     padding: 1rem;
     color: var(--text);
@@ -330,6 +657,12 @@ footer {
 }
 
 @media (max-width: 40rem) {
-    .site-header { align-items: flex-start; flex-direction: column; }
-    .catalog { grid-template-columns: 1fr; }
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .catalog {
+        grid-template-columns: 1fr;
+    }
 }

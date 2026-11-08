@@ -1,89 +1,122 @@
 <!DOCTYPE html>
 <html lang="ca">
-    <head>
-        <meta charset="UTF-8">
-        <title>GTA VI | Dogstar Games Store</title>
-        <meta name="description" content="Fitxa detallada del joc GTA 6 a Dogstar Games Store">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/estils.css">
-        <script src="../js/tema.js" defer></script>
-    </head>
-    <body>
-        <header class="site-header">
-            <a href="index.html" class="logo" aria-label="Anar al catàleg de videojocs">
-                <img src="../img/logo dogstar.png" alt="Logo Dogstar Games Store" width="40" height="40">
-                <h1>DOGSTAR GAMES STORE</h1>
-            </a>
-            <nav class="main-nav">
-                <a href="index.html">Catàleg</a>
-                <a href="fitxa.html">Fitxa</a>
-                <a href="reserva.html">Reserva</a>
-                <button id="tema-toggle" class="theme-toggle" aria-label="Canviar tema">☀︎</button>
-            </nav>
-        </header>
 
-        <main id="fitxa">
-            <section>
-                <p><strong>RESERVA</strong></p>
-                <h2><strong>GTA VI</strong></h2>
-                <img src="../img/GTA VI.jpg" alt="Portada de GTA 6" width="900" height="500">
-                <table class="fitxa-table" aria-label="Informació técnica del joc">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Gènere</th>
-                            <td>Acció / Aventura / Món obert</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Plataforma</th>
-                            <td>PS5, Xbox Series X|S</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Desenvolupador</th>
-                            <td>Rockstar Games</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Editor</th>
-                            <td>Rockstar Games</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Llançament</th>
-                            <td>19 de novembre de 2026</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <title>GTA VI | Dogstar Games Store</title>
+    <meta name="description" content="Fitxa detallada del joc GTA 6 a Dogstar Games Store">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estils.css">
+    <script src="../js/compteenrere.js" defer></script>
+    <script src="../js/fitxa.js" defer></script>
+    <script src="../js/tema.js" defer></script>
+</head>
 
-            <section>
-                <h3>Descripció</h3>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Anar al catàleg de videojocs">
+            <img src="../img/logo dogstar.png" alt="Logo Dogstar Games Store" width="40" height="40">
+            <h1>DOGSTAR GAMES STORE</h1>
+        </a>
+        <nav class="main-nav">
+            <a href="index.html">Catàleg</a>
+            <a href="fitxa.html">Fitxa</a>
+            <a href="reserva.html">Reserva</a>
+            <button id="tema-toggle" class="theme-toggle" aria-label="Canviar tema">☀️</button>
+        </nav>
+    </header>
 
-                <p><strong>Grand Theft Auto VI</strong> és un videojoc d'acció i aventura en món obert desenvolupat per Rockstar Games.</p>
+    <main id="fitxa">
+        <section>
+            <p><strong>RESERVA</strong></p>
+            <h2><strong>GTA VI</strong></h2>
+            <img src="../img/GTA VI.jpg" alt="Portada de GTA 6" width="900" height="500">
 
-                <p>La història es desenvolupa a <strong>Leonida</strong>, un estat fictici inspirat en la Florida actual, amb les zones de <strong>Vice City</strong> i els seus voltants. El joc promet un entorn enorme, viu i detallat.</p>
+            <div class="fitxa-llancament">
+                <p class="etiqueta-llancament">Llançament imminent · 19 de novembre de 2026</p>
+                <div id="compte-fitxa"></div>
+                <a class="boto-reservar" href="reserva.html?joc=GTA%20VI">Reservar aquest joc</a>
+            </div>
 
-                <p>La trama gira al voltant de <strong>Lucia</strong> i <strong>Jason</strong>, dos personatges que es troben immersos en un món criminal ple de decisions arriscades, robatoris i conspiracions. La seva aventura es basa en sobreviure mentre combaten les pressions de les autoritats i dels seus enemics.</p>
+            <table class="fitxa-table" aria-label="Informació técnica del joc">
+                <tbody>
+                    <tr>
+                        <th scope="row">Gènere</th>
+                        <td>Acció / Aventura / Món obert</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Plataforma</th>
+                        <td>PS5, Xbox Series X|S</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Desenvolupador</th>
+                        <td>Rockstar Games</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Editor</th>
+                        <td>Rockstar Games</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Llançament</th>
+                        <td>19 de novembre de 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-                <p>Pel que fa al joc, GTA VI inclou persecucions policials, exploració lliure, interaccions amb el món i un gran nombre de vehicles i situacions dinàmiques. Tot això crea una experiència molt més immersiva i realista que en entregues anteriors.</p>
+        <section>
+            <h3>Descripció</h3>
 
-                <p><strong>Llançament:</strong> 19 de novembre de 2026<br>
-                <strong>Plataformes:</strong> PS5 i Xbox Series X|S</p>
-            </section>
+            <p><strong>Grand Theft Auto VI</strong> és un videojoc d'acció i aventura en món obert desenvolupat per
+                Rockstar Games.</p>
 
-            <section>
-                <h3>Video de joc</h3>
-                <video controls width="900">
+            <p>La història es desenvolupa a <strong>Leonida</strong>, un estat fictici inspirat en la Florida actual,
+                amb les zones de <strong>Vice City</strong> i els seus voltants. El joc promet un entorn enorme, viu i
+                detallat.</p>
+
+            <p>La trama gira al voltant de <strong>Lucia</strong> i <strong>Jason</strong>, dos personatges que es
+                troben immersos en un món criminal ple de decisions arriscades, robatoris i conspiracions. La seva
+                aventura es basa en sobreviure mentre combaten les pressions de les autoritats i dels seus enemics.</p>
+
+            <p>Pel que fa al joc, GTA VI inclou persecucions policials, exploració lliure, interaccions amb el món i un
+                gran nombre de vehicles i situacions dinàmiques. Tot això crea una experiència molt més immersiva i
+                realista que en entregues anteriors.</p>
+
+            <p><strong>Llançament:</strong> 19 de novembre de 2026<br>
+                <strong>Plataformes:</strong> PS5 i Xbox Series X|S
+            </p>
+        </section>
+
+        <section>
+            <h3>Video de joc</h3>
+            <video controls width="900" poster="../img/GTA VI.jpg" preload="none">
                 <source src="../img/GTA VI Launch Trailer.mp4" type="video/mp4">
-                </video>
-            </section>
-            <section>
-                <h3>Captures destacades</h3>
-                <img src="../img/1 Gameplay GTA VI.jpg" alt="Gameplay de GTA 6" width="900" height="500">
-                <p></p>
-                <img src="../img/Lucia Vaixell.jpg" alt="Escena de Vice City a GTA 6" width="900" height="500">
-            </section>
-        </main>
+            </video>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 Dogstar Games Store. Tots els drets reservats.</p>
-        </footer>
-    </body>
+        <section>
+            <h3>Captures destacades</h3>
+            <img class="captura" tabindex="0" role="button" src="../img/1 Gameplay GTA VI.jpg" alt="Gameplay de GTA 6"
+                title="Clica per ampliar" width="900" height="500">
+            <p></p>
+            <img class="captura" tabindex="0" role="button" src="../img/Lucia Vaixell.jpg"
+                alt="Escena de Vice City a GTA 6" title="Clica per ampliar" width="900" height="500">
+        </section>
+    </main>
+
+    <div id="visor" class="visor ocult">
+        <button type="button" class="tanca-visor" aria-label="Tancar">✕</button>
+        <img id="visor-imatge" alt="">
+    </div>
+
+    <div class="barra-reserva">
+        <span>GTA VI · 19 de novembre de 2026</span>
+        <a class="boto-reservar" href="reserva.html?joc=GTA%20VI">Reservar</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dogstar Games Store. Tots els drets reservats.</p>
+    </footer>
+</body>
+
 </html>

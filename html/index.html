@@ -1,35 +1,93 @@
 <!DOCTYPE html>
 <html lang="ca">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dogstar Games Store</title>
-        <meta name="description" content="Catàleg de videojocs de Rockstar Games">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Dogstar Games Store">
-        <link rel="stylesheet" href="../css/estils.css">
-        <script src="../js/cataleg.js" defer></script>
-        <script src="../js/tema.js" defer></script>
-    </head>
 
-    <body>
-        <header class="site-header">
-            <a href="index.html" class="logo" aria-label="Anar al catàleg de videojocs">
-                <img src="../img/logo dogstar.png" alt="Logo Dogstar Games Store" width="40" height="40">
-                <h1>DOGSTAR GAMES STORE</h1>
-            </a>
-            <nav class="main-nav">
-                <a href="index.html">Catàleg</a>
-                <a href="fitxa.html">Fitxa</a>
-                <a href="reserva.html">Reserva</a>
-                <button id="tema-toggle" class="theme-toggle" aria-label="Canviar tema">☀︎</button>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>Dogstar Games Store</title>
+    <meta name="description" content="Catàleg de videojocs de Rockstar Games">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Dogstar Games Store">
+    <link rel="stylesheet" href="../css/estils.css">
+    <script src="../js/compteenrere.js" defer></script>
+    <script src="../js/cataleg.js" defer></script>
+    <script src="../js/tema.js" defer></script>
+</head>
 
-        <main id="cataleg">
-            <h2 class="catalog-title">Catàleg de videojocs</h2>
-            <!-- Les targetes es generen amb JavaScript (js/cataleg.js) -->
-            <div id="contenidor-jocs" class="catalog"></div>
-        </main>
-    </body>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Anar al catàleg de videojocs">
+            <img src="../img/logo dogstar.png" alt="Logo Dogstar Games Store" width="40" height="40">
+            <h1>DOGSTAR GAMES STORE</h1>
+        </a>
+        <nav class="main-nav">
+            <a href="index.html">Catàleg</a>
+            <a href="fitxa.html">Fitxa</a>
+            <a href="reserva.html">Reserva</a>
+            <button id="tema-toggle" class="theme-toggle" aria-label="Canviar tema">☀️</button>
+        </nav>
+    </header>
+
+    <main id="cataleg">
+        <h2 class="catalog-title">Catàleg de videojocs</h2>
+
+        <div class="filtres">
+            <div class="filtre">
+                <label for="cerca">Cerca per títol</label>
+                <input type="text" id="cerca" placeholder="Escriu un títol...">
+            </div>
+
+            <div class="filtre">
+                <label for="filtre-plataforma">Plataforma</label>
+                <select id="filtre-plataforma">
+                    <option value="Totes">Totes</option>
+                    <option value="PC">PC</option>
+                    <option value="PS1">PS1</option>
+                    <option value="PS2">PS2</option>
+                    <option value="PS3">PS3</option>
+                    <option value="PS4">PS4</option>
+                    <option value="PS5">PS5</option>
+                    <option value="Xbox 360">Xbox 360</option>
+                    <option value="Xbox One">Xbox One</option>
+                    <option value="Xbox Series X">Xbox Series X</option>
+                    <option value="Game Boy Advance">Game Boy Advance</option>
+                    <option value="Nintendo DS">Nintendo DS</option>
+                    <option value="PSP">PSP</option>
+                </select>
+            </div>
+
+            <div class="filtre">
+                <label for="ordre">Ordenar per</label>
+                <select id="ordre">
+                    <option value="defecte">Per defecte</option>
+                    <option value="preu-asc">Preu: de menys a més</option>
+                    <option value="preu-desc">Preu: de més a menys</option>
+                    <option value="valoracio">Valoració: de més a menys</option>
+                    <option value="titol">Títol: A - Z</option>
+                </select>
+            </div>
+
+            <div class="filtre">
+                <label for="preu-maxim">Preu màxim (IVA inclòs, €)</label>
+                <input type="number" id="preu-maxim" min="0" step="1" placeholder="Sense límit">
+            </div>
+
+            <div class="filtre filtre-casella">
+                <label for="nomes-estoc">
+                    <input type="checkbox" id="nomes-estoc">
+                    Només amb estoc
+                </label>
+            </div>
+
+            <div class="filtre">
+                <button type="button" id="neteja-filtres" class="boto-secundari">Netejar filtres</button>
+            </div>
+        </div>
+
+        <p id="comptador" role="status"></p>
+        <p id="missatge-buit" class="ocult">No s'ha trobat cap joc</p>
+
+        <div id="contenidor-jocs" class="catalog"></div>
+    </main>
+</body>
 
 </html>
